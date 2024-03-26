@@ -2,6 +2,7 @@ package com.myshopping.MyShopping.models;
 
 import jakarta.persistence.*;
 
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -10,5 +11,5 @@ public class Laptop {
     UUID id;
     String name;
     @ManyToMany
-    public Student student;
+    List<Student> student;
 }
