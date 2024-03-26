@@ -35,10 +35,6 @@ public class AppUser {
     }
 
     public UUID getId() {
-        scn.cl
-        try(Scanner scn = new Scanner("myfile.txt")){
-
-        }catch ()
         return id;
     }
 
