@@ -1,5 +1,6 @@
 package com.myshopping.MyShopping;
 
+import com.myshopping.MyShopping.models.Laptop;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,6 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class MyShoppingApplication {
 
 	public static void main(String[] args) {
+		Laptop laptop = new Laptop();
+		laptop.s
 		SpringApplication.run(MyShoppingApplication.class, args);
 	}
 
