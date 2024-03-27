@@ -1,8 +1,6 @@
 package com.myshopping.MyShopping.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.Scanner;
 import java.util.UUID;
@@ -11,6 +9,7 @@ import java.util.UUID;
 // for this class
 public class AppUser {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     UUID id; // Unique base64Id -> It is the kind that got generated on the basis of time
     @Column(nullable = false)
     String name;

@@ -9,7 +9,6 @@ public class MyShoppingApplication {
 
 	public static void main(String[] args) {
 		Laptop laptop = new Laptop();
-		laptop.s
 		SpringApplication.run(MyShoppingApplication.class, args);
 	}
 
