@@ -12,6 +12,7 @@ public class Product {
      * Whenever we will add a new product so a new unique id will automatically get generated.
       */
     UUID id;
+    @Column(nullable = false)
     String name;
     String category;
     int quantity;

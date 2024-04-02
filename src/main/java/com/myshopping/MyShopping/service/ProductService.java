@@ -26,6 +26,10 @@ public class ProductService {
         return productRepository.findById(id).orElse(null);
     }
 
+    public void updateProductQuantity(UUID productID, int quantity){
+        productRepository.updateProductQuantity(productID, quantity);
+    }
+
     public List<ProductDTO> convertProductToProductDTO(List<Product> products){
         List<ProductDTO> productList = new ArrayList<>();
 
