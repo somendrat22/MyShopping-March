@@ -24,6 +24,9 @@ public class BuyerService {
     @Autowired
     OrderRepository orderRepository;
 
+    @Autowired
+    MailService mailService;
+
     public OrderTable placeOrder(List<OrderDetailsDTO> orderDetailsDTOList, UUID userId){
         // Get user by id
         // 1. Verify user who is placing order
@@ -53,6 +56,8 @@ public class BuyerService {
         orderTable.setTotalQuantity(totalQuantity);
 
         orderRepository.save(orderTable);
+
+        mailService.sendMail("Hey, order got placed", user.getEmail(), "Congratulations !! order placed");
 
         return orderTable;
 
